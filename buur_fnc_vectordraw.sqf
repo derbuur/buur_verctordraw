@@ -1,5 +1,5 @@
 /*
-This short script draws an arrow on the map while pressing the shift key. It also give distance and Angel.
+This short script draws an arrow on the map while pressing the lef alt key. It also give distance and Angel.
 No needs for input Variables.
 Written by buur (derbuur@googlemail.com)
 
