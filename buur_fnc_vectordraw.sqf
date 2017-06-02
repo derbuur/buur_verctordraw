@@ -1,3 +1,9 @@
+/*
+This short script draws an arrow on the map while pressing the shift key. It also give distance and Angel.
+No needs for input Variables.
+Written by buur (derbuur@googlemail.com)
+
+*/
 findDisplay 12 displayaddEventHandler ["MouseButtonDown",
 	{if (_this select 6) then
 		{
