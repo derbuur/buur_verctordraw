@@ -4,15 +4,15 @@ No needs for input Variables.
 Written by buur (derbuur@googlemail.com)
 
 */
-player setVariable ["buur_vectordraw_mydistance",0];
 
+if (!hasInterface) exitWith {};
 
 findDisplay 12 displayaddEventHandler ["MouseButtonDown",
 		{if (_this select 6) then
 			{
 					player setVariable ["buur_vectordraw_myStartCoordinates",((findDisplay 12) displayCtrl 51) ctrlMapScreenToWorld [(_this select 2), (_this select 3)]];
 					player setVariable ["buur_vectordraw_myActualCoordinates",(player getVariable "buur_vectordraw_myStartCoordinates")];
-					player getVariable "buur_vectordraw_mydistance";
+
 
 					_id_MouseMoving = ((findDisplay 12) displayCtrl 51) ctrladdEventHandler
 						["MouseMoving",
@@ -40,7 +40,7 @@ findDisplay 12 displayaddEventHandler ["MouseButtonDown",
 
 findDisplay 12 displayaddEventHandler
 	["MouseButtonUp",
-		{if (isnil str (player getVariable "buur_vectordraw_mydistance")) then
+		{if (isnil str (player getVariable "buur_vectordraw_myStartCoordinates")) then
 			{
 				_id_MouseMoving = player getVariable "buur_vectordraw_id_MouseMoving";
 				_id_Draw = player getVariable "buur_vectordraw_id_Draw";
